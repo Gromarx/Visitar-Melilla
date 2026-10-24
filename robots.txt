@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /cache/
+
+Sitemap: https://www.visitarmelilla.es/sitemap.xml

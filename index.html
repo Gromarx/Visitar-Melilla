@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Visitar Melilla · Guía turística</title>
+<meta name="description" content="Guía turística de Melilla: dónde comer, dormir, qué visitar, rutas con audioguía, playas y planes.">
+<meta name="theme-color" content="#0B5FB0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B111C" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="img/brand/favicon.ico" sizes="any">
+<link rel="icon" href="img/brand/logo-icono.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/brand/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="splash" aria-hidden="true">
+  <div class="splash-logo" id="splash-logo"></div>
+  <div class="splash-bar"><span></span></div>
+</div>
+
+<header class="topbar" id="topbar">
+  <button class="icon-btn" id="btn-back" aria-label="Atrás" hidden></button>
+  <button class="icon-btn" id="btn-menu" aria-label="Menú"></button>
+  <a href="#/" class="brand" id="brand" aria-label="Visitar Melilla"></a>
+  <nav class="desk-nav" id="desk-nav"></nav>
+  <div class="top-actions">
+    <button class="icon-btn" id="btn-search" aria-label="Buscar"></button>
+    <button class="icon-btn" id="btn-theme" aria-label="Tema"></button>
+    <button class="lang-btn" id="btn-lang" aria-label="Idioma">ES</button>
+  </div>
+</header>
+
+<main id="view" tabindex="-1"></main>
+
+<nav class="tabbar" id="tabbar"></nav>
+
+<div id="mini-player" hidden></div>
+<a id="wa-fab" class="wa-fab" hidden target="_blank" rel="noopener" aria-label="WhatsApp"></a>
+
+<div class="drawer-wrap" id="drawer" hidden>
+  <div class="drawer-scrim" data-close></div>
+  <aside class="drawer" role="dialog" aria-modal="true" id="drawer-panel"></aside>
+</div>
+
+<div class="sheet-wrap" id="sheet" hidden>
+  <div class="sheet-scrim" data-close></div>
+  <div class="sheet" role="dialog" aria-modal="true" id="sheet-panel"></div>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<audio id="audio" preload="none"></audio>
+
+<script src="content.js"></script>
+  <script src="visitas.js"></script>
+  <script src="audios.js"></script>
+<script src="place-photos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
